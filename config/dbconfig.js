@@ -10,6 +10,5 @@ module.exports=mongoose.connect(process.env.MONGO_URL)
 });
 
 
-const mongoose=require("mongoose");
-require('dotenv').config();
+
 
