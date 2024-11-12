@@ -6,7 +6,7 @@ module.exports=mongoose.connect(process.env.MONGO_URL)
     console.log("MongoDB connected");
 })
 .catch((err) => {
-    console.log("There is an error:", err);
+    console.log("Error in code:", err);
 });
 
 
