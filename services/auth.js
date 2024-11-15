@@ -1,5 +1,5 @@
 const jwt=require("jsonwebtoken");
-const secret="ncV$%#@$lh";
+const secret="!U^%^CV%#V*NJG";
 
 function createWebToken(user){
     const payload={
