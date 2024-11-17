@@ -39,7 +39,7 @@ route.get("/:id", async (req, res) => {
   try {
       const blogs = await blog.findById(id).populate("createdBy");
       
-      if (!blogs) return res.status(404).send("Blog not found");
+      if (!blogs) return res.status(404).send("Blog was not found Error!");
       const c=await comment.find({blodId: req.params.id }).populate("createdBy")
 
 
