@@ -11,7 +11,8 @@ const cookieParser=require("cookie-parser");
 //app.set
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
-//app.use
+
+//app.use middleware
 
 app.use(cookieParser());
 app.use(express.json());
