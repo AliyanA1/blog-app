@@ -3,10 +3,10 @@ require('dotenv').config();
  
 mongoose.connect(process.env.MONGO_URL)
 .then(() => {
-    console.log("MongoDB connected");
+    console.log("MongoDB is connected");
 })
-.catch((err) => {
-    console.log("Error in code:", err);
+.catch((error) => {
+    console.log("Error in this code:", error);
 });
 
 module.exports=mongoose.connection;
