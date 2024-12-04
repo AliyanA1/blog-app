@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 require('dotenv').config(); 
  
-module.exports=mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL)
 .then(() => {
     console.log("MongoDB connected");
 })
@@ -9,6 +9,7 @@ module.exports=mongoose.connect(process.env.MONGO_URL)
     console.log("Error in code:", err);
 });
 
+module.exports=mongoose.connection;
 
 
 
