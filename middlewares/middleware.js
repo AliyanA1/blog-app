@@ -13,7 +13,7 @@ module.exports.checkPoint = async (req, res, next) => {
         const user = await userModel.findOne({ email: decoded.email });
         if (user) {
             req.user = user;  // Attach user to req object
-            return next();
+            return next();//calling the middleware next()
         }
 
         res.redirect("/user/signin");
