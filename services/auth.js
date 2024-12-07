@@ -11,7 +11,7 @@ function createWebToken(user){
     const token=jwt.sign(payload,secret);
     return token;
 }
-
+//function for token viladation
 function validateToken(token){
     const payload=jwt.verify(token,secret);
     return payload;
