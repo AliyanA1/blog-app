@@ -7,6 +7,7 @@ const db=require("./config/dbconfig")
 const userRoute=require("./routes/user");  
 const blogRoute=require("./routes/blog")
 const cookieParser=require("cookie-parser");  
+const port=3000 || process.env.PORT;
 
 //app.set
 app.set("view engine","ejs");
@@ -24,4 +25,4 @@ app.use("/blog",blogRoute);
  
 
  
-app.listen(process.env.PORT);
+app.listen(port);
