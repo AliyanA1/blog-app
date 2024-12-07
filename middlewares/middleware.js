@@ -18,7 +18,7 @@ module.exports.checkPoint = async (req, res, next) => {
 
         res.redirect("/user/signin");
     } catch (err) {
-        console.error("Error in middleware:", err);
+        console.error(`the error is:${err}`);
         res.status(500).send("Internal Server Error");
     }
 };
