@@ -1,6 +1,6 @@
 const userModel = require("../models/user");
 const { validateToken } = require("../services/auth");
-
+//check point middleware
 module.exports.checkPoint = async (req, res, next) => {
     try {
         if (!req.cookies?.token) {
