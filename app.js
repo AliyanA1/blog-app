@@ -22,7 +22,5 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use("/user",userRoute);   
 app.use("/blog",blogRoute);
 
- 
-
- 
+ //server listen port 3000 or the avaliable 
 app.listen(port);
