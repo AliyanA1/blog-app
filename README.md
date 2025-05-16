@@ -64,15 +64,19 @@ A Feature-Rich Full-Stack Blog Application
    cd blogify
 
   
-  `bash  npm install
+Step 2: Install Dependencies
+       npm install
 
 
-  ```bash
+Step 3: Set Up Environment Variables
+Create a .env file in the root directory and add:
    Set environment variables
    Create a .env file in the root with the following:
    MONGO_URI=mongodb://localhost:27017/blogify
    SESSION_SECRET=your_secret_key
    PORT=3000
 
-   `bash npm start
+
+Step 4: Start the Application
+      npm start
 
