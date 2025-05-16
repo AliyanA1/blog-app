@@ -63,17 +63,16 @@ A Feature-Rich Full-Stack Blog Application
    git clone https://github.com/yourusername/blogify.git
    cd blogify
 
-   ```bash
-    npm install
+  
+  `bash  npm install
 
 
-   ```bash 
+  ```bash
    Set environment variables
    Create a .env file in the root with the following:
    MONGO_URI=mongodb://localhost:27017/blogify
    SESSION_SECRET=your_secret_key
    PORT=3000
 
-   ```bash
-   npm start
+   `bash npm start
 
