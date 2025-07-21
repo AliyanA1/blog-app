@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+
+    
+    <!-- Add Bootstrap CSS -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header text-center bg-primary text-white">
+          <h4>Enter Your Details</h4>
+        </div>
+        <div class="card-body">
+         
+            <form action="<%= locals.isEdit ? `/blog/update/${blog._id}` : '/blog/add-new' %>" 
+      method="post" enctype="multipart/form-data">
+     
+      <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" name="title" 
+           value="<%= locals.blog ? locals.blog.title : '' %>" required>
+
+    <label for="body" class="form-label">Body</label>
+    <textarea class="form-control" name="body" rows="5" required><%= locals.blog ? locals.blog.body : '' %></textarea>
+
+    <input class="form-control" type="file" name="ImageUrl" <%= locals.isEdit ? '' : 'required' %>>
+    
+    <button type="submit" class="btn btn-primary w-100">
+        <%= locals.isEdit ? 'Update' : 'Submit' %>
+    </button>
+</form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+    <%- include("./partials/script.ejs") %>
+</body>
+</html>
