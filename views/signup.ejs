@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Sign Up | MyApp</title>
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+
+  
+
+    <main class="container mt-5">
+        <section class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4 text-center">Create an Account</h2>
+                <form action="/user/signUp" method="POST" novalidate>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            name="userName" 
+                            id="userName" 
+                            class="form-control" 
+                            placeholder="Enter your full name" 
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            class="form-control" 
+                            placeholder="Enter your email" 
+                            aria-describedby="emailHelp" 
+                            required>
+                        <div id="emailHelp" class="form-text">We’ll never share your email with anyone else.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            id="password" 
+                            class="form-control" 
+                            placeholder="Create a password" 
+                            required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-4">
+                    <p>Already have an account?</p>
+                    <a href="/user/signIn" class="btn btn-outline-secondary">Sign In</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include("./partials/script.ejs") %>
+</body>
+</html>
