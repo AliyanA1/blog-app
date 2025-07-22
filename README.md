@@ -60,8 +60,8 @@ A Feature-Rich Full-Stack Blog Application
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/blogify.git
-   cd blogify
+   git clone git@github.com:AliyanA1/blog-app.git
+   cd blog-app
 
   
 Step 2: Install Dependencies
